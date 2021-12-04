@@ -14,7 +14,7 @@
             var input = FileReading.GetInput("input.txt");
             len = input.First().Length;
             integers = input.Select(x => Convert.ToInt32(x, 2));
-            Console.WriteLine("AoC - Day02");
+            Console.WriteLine("AoC - Day03");
             Console.WriteLine("Solution Part 1:");
             Console.WriteLine(Part1(integers));
             Console.WriteLine("Solution Part 2:");
