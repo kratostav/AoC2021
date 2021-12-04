@@ -16,7 +16,6 @@
             var inputEnumerator = input.GetEnumerator();
             inputEnumerator.MoveNext();
             drawings = inputEnumerator.Current.Split(",").Select(x => x.Trim()).Select(int.Parse);
-            inputEnumerator.MoveNext();
             while (inputEnumerator.MoveNext())
             {
                 var boardLines = new List<string>();
@@ -28,7 +27,10 @@
                         break;
                     }
                 }
-                boards.Add(new BingoBoard(boardLines));
+                if(boardLines.Count > 0)
+                {
+                    boards.Add(new BingoBoard(boardLines));
+                }
             }
             Console.WriteLine("AoC - Day04");
             Console.WriteLine("Solution Part 1:");
