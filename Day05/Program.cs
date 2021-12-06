@@ -40,7 +40,6 @@
                     }
                 }
             }
-            //arrDebug(points);
             return points.Flatten().Where(x => x > 1).Count();
         }
 
@@ -77,8 +76,7 @@
                         var yEnd = line.End.Y;
                         points[xStart, yStart]++;
                         do
-                        {
-                            
+                        {                            
                             if (line.Start.X < line.End.X)
                             {
                                 xStart++;
