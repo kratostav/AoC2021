@@ -31,10 +31,10 @@
 
         static long Simulate(long[] fish, int days)
         {
-            for (int i = 0; i < days; i++)
+            for (var i = 0; i < days; i++)
             {
                 var oldFishes = fish[0];
-                for (int j = 1; j < fish.Length; j++)
+                for (var j = 1; j < fish.Length; j++)
                 {
                     fish[j - 1] = fish[j];
                 }
